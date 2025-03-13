@@ -1,0 +1,43 @@
+/* Global Styles */
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sunny Background */
+.sunny {
+	background-image: url('/images/sunny.jpg');
+    animation: sunnyAnimation 10s linear infinite;
+}
+
+/* Cloudy Background */
+.cloudy {
+	background-image: url('/images/sunny.jpg');
+    animation: rainAnimation 20s infinite;
+}
+
+/* Rainy Background */
+.rainy {
+	background-image: url('/images/rain.jpg');
+    animation: rainAnimation 20s infinite;
+}
+
+
+/* Keyframes for Animations */
+@keyframes sunnyAnimation {
+    0% { background-color: #ff7e5f; }
+    50% { background-color: #feb47b; }
+    100% { background-color: #ff7e5f; }
+}
+
+@keyframes cloudyAnimation {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 200%; }
+}
+
+@keyframes rainAnimation {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
+}
